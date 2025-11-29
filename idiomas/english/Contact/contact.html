@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="/styles/tailwind.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./img/favicon-16x16.png" type="image/x-icon">
+    <title>Contato</title>
+</head>
+
+<body class="bg-gray-100 font-sans flex flex-col min-h-screen">
+
+   
+    <!-- Navbar -->
+<nav class="bg-seagull-400 fixed top-0 w-full z-20">
+    
+    <div class="container mx-auto flex justify-between items-center px-4">
+        <!-- Logo -->
+        <div class="text-white font-bold text-lg">
+            <a href="index.html">
+                <img src="./img/Logomarca.png" alt="" class="w-auto h-20">
+            </a>
+        </div>
+        <!-- Ícone do menu para dispositivos móveis -->
+        <div class="lg:hidden">
+            <button id="menu-toggle" class="text-white focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </div>
+        <!-- Links de navegação para dispositivos maiores -->
+        <div class="hidden lg:flex space-x-4">
+            <a href="/index.html" class="text-white nav-link font-sans font-bold">Início</a>
+            <a href="/sobre/sobre.html" class="text-white nav-link font-sans font-bold">Sobre</a>
+            <a href="/contato/contato.html" class="text-white nav-link font-sans font-bold">Contato</a>
+        </div>
+    </div>
+</nav>
+
+
+
+    <!-- Conteúdo principal -->
+    <div class="container mx-auto mt-28 p-8 bg-white rounded-lg shadow-md flex-grow">
+        <!-- Título -->
+        <h2 class="text-2xl font-bold mb-4 text-center"></h2>
+
+        <!-- Espaço para imagem -->
+        <div class="mb-8">
+            <img src="/img/Contato.png" alt="Imagem de Contato" class="w-full rounded-md">
+        </div>
+        <!-- Título "Nossa Localização" -->
+        <h2 class="text-2xl font-bold mb-4 text-center">Nossa Localização:</h2>
+        <!-- Mapa incorporado -->
+        <div class="mb-8">
+            <!-- Substitua a URL do Google Maps no src -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3821.4077580150624!2d-43.85460452406026!3d-16.70649434607694!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x754ab41ec857779%3A0xa51e24e4fc960d32!2sR.%20Jo%C3%A3o%20Figueiredo%2C%20318%20-%20Vila%20Exposicao%2C%20Montes%20Claros%20-%20MG%2C%2039400-286!5e0!3m2!1spt-BR!2sbr!4v1706137389506!5m2!1spt-BR!2sbr"
+                width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </div>
+
+    <!-- Rodapé fixo -->
+<footer class="bg-seagull-400 text-white p-4 mt-8 font-sans font-bold">
+    <div class="container mx-auto text-center">
+        
+        <!-- Adicione a classe "text-left" à div para alinhar à esquerda -->
+        <div class="text-left flex space-x-4">
+            <h3 class="text-lg font-bold mb-4">Nossas Mídias Sociais:</h3>
+            <a href="https://www.facebook.com/trabalhadores.daultimahora.33" class="text-white">
+                <i class="fab fa-facebook-square text-2xl"></i>
+            </a>
+            <a href="https://www.instagram.com/trabalhadores.daultimahora/" class="text-white">
+                <i class="fab fa-instagram-square text-2xl"></i>
+            </a>
+            <a href="https://wa.me/38992072259" target="_blank" class="text-white">
+                <i class="fab fa-whatsapp-square text-2xl"></i>
+            </a>
+            
+        </div>
+        <p>&copy; 2024 Instituição de Caridade Trabalhadores da Última Hora. Todos os direitos reservados.</p>
+        <p>CNPJ: 53.140.991/0001-74</p>
+        <div class="mt-4">
+            <img src="/img/Logomarca.png" alt="Logomarca" class="w-auto h-16 mx-auto">
+        </div>
+    </div>
+</footer>
+
+
+
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            const menuToggle = $('#menu-toggle');
+            const menuItems = $('.lg\\:flex');
+
+            menuToggle.on('click', function () {
+                menuItems.toggleClass('hidden');
+            });
+        });
+    </script>
+</body>
+
+</html>
