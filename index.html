@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Adicione o link para o Owl Carousel CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.theme.default.min.css" />
+    <!-- Adicione o link para o jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Adicione o link para o Owl Carousel JS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="./styles/tailwind.css">
+    <script src="./js/tailwind.config.js"></script>
+
+
+    <!-- CSS do Video Play -->
+    <link rel="stylesheet" type="text/css" href="./styles/styles.css" />
+    <!-- Link Fonte Nunito Sans -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Adicione o link para a biblioteca Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+   
+    <!-- Link para FontAwesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"> <!-- Link para FontAwesome -->
+    <!-- Link para a biblioteca Waypoints - Contador -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
+
+    <title>Trabalhadores da Última Hora</title>
+</head>
+
+<body  class="bg-gray-100 font-sans">
+
+    
+<!-- Navbar -->
+<nav class="bg-seagull-400 p-2 fixed top-0 w-full z-20">
+    
+    <div class="container mx-auto flex justify-between items-center px-4">
+        <!-- Logo -->
+        <div class="text-white font-bold text-lg">
+            <a href="index.html">
+                <img src="./img/Logomarca.png" alt="" class="w-auto h-20">
+            </a>
+        </div>
+        <!-- Ícone do menu para dispositivos móveis -->
+        <div class="lg:hidden">
+            <button id="menu-toggle" class="text-white focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </div>
+        <!-- Links de navegação para dispositivos maiores -->
+        <div class="hidden lg:flex space-x-4">
+            <a href="index.html" class="text-white nav-link font-sans font-bold">Início</a>
+            <a href="./sobre/sobre.html" class="text-white nav-link font-sans font-bold">Sobre</a>
+            <a href="./contato/contato.html" class="text-white nav-link font-sans font-bold">Contato</a>
+        </div>
+    </div>
+</nav>
+
+
+
+    <!-- Conteúdo principal -->
+<div class="container mx-auto mt-28 flex flex-col lg:flex-row ">
+
+   <!-- Parte 1: Título e Frase -->
+<div class="lg:w-1/2 p-8 mb-4 rounded-xl overflow-hidden">
+    <div class="bg-gray-300 p-8">
+        <h1 class="text-4xl font-bold mb-2">Bem-vindo ao site Trabalhadores da Última Hora!</h1>
+        
+        <p class="text-gray-700 font-sans font-bold italic">(...)"Meus filhos, na máxima: Fora da caridade não há salvação, estão encerrados os destinos dos homens, na Terra e no céu; na Terra, porque à sombra desse estandarte eles viverão em paz; no céu, porque os que a houverem praticado acharão graças diante do Senhor. Essa divisa é o facho celeste, a luminosa coluna que guia o homem no deserto da vida, encaminhando-o para a Terra da Promissão.(...) - CAP 15, Item 10 - Evangelho Segundo o Espiritismo - Allan Kardec"</p>
+        
+    </div>
+     
+</div>
+
+
+
+
+    
+
+<!-- Parte 2: Vídeo e Imagem -->
+<div class="lg:w-1/2 relative flex justify-center items-center">
+    <div class="w-full h-full overflow-hidden relative">
+        <div class="video-container relative">
+            <img src="./img/Logomarca.png" alt="" class="mx-auto" style="width: 100%; max-width: 270px;">
+            <!-- Botão de reprodução -->
+            <button id="playButton" class="play-button absolute bottom-0 left-1/2 transform -translate-x-1/2 -mb-6"><span>▶</span></button>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+      
+    <!-- Modal para o vídeo -->
+    <div id="videoModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <video class="w-full h-full" controls poster="" id="modalVideoPlayer">
+                <!-- Adicione o caminho do vídeo local ou URL do vídeo aqui -->
+                <source src="./video/Trabalhadores da Última Hora - Montes Claros - MG.mp4" type="video/mp4">
+                Seu navegador não suporta o elemento de vídeo.
+            </video>
+        </div>
+    </div>
+
+</div>
+
+
+<!-- Seção de Contadores -->
+<section class="container mx-auto mt-8 ">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4">
+        <!-- Contador de Marmitas Distribuídas -->
+        <div class="p-4 rounded-lg shadow-md flex items-center" style="background-color: #F4b821;">
+            <div class="mr-4 ">
+                <i class="fas fa-utensils text-3xl text-gray-500"></i>
+            </div>
+            <div >
+                <h3 class="text-xl font-bold">Marmitas Distribuídas</h3>
+                <p class="text-gray-600"><b>+ de 600 por dia</b></p>
+            </div>
+        </div>
+
+        <!-- Contador de Horas de Colaboração -->
+        <div class="bg-gray-300 p-4 rounded-lg shadow-md flex items-center" style="background-color: #F4b821;">
+            <div class="mr-4">
+                <i class="far fa-clock text-3xl text-gray-500"></i>
+            </div>
+            <div >
+                <h3 class="text-xl font-bold">Horas de Colaboração</h3>
+                <p class="text-gray-600"><b>+ de 10000</b></p>
+            </div>
+        </div>
+
+        <!-- Contador de Pessoas Atendidas -->
+        <div class=" p-4 rounded-lg shadow-md flex items-center bg-gray-300" style="background-color: #F4b821;">
+            <div class="mr-4">
+                <i class="fas fa-users text-3xl text-gray-500"></i>
+            </div>
+            <div>
+                <h3 class="text-xl font-bold">Pessoas Atendidas</h3>
+                <p class="text-gray-600"><b>+ de 8000</b></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+    <!-- Seção de Cards Responsivos -->
+    <div class="container mx-auto mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Card 1 -->
+        <div class="bg-gray-300 p-4 rounded-lg shadow-md">
+            <h2 class="text-xl font-bold mb-2">Endereço</h2>
+            <img src="img/3.png" alt="Placeholder 1" class="mb-4 rounded-lg">
+            <p class="text-gray-700"></p>
+        </div>
+        <!-- Card 2 -->
+        <div class="bg-gray-300 p-4 rounded-lg shadow-md">
+            <h2 class="text-xl font-bold mb-2">Kombi</h2>
+            <img src="img/1.png" alt="Placeholder 2" class="mb-4 rounded-lg">
+            <p class="text-gray-700"></p>
+        </div>
+        <!-- Card 3 -->
+        <div class="bg-gray-300 p-4 rounded-lg shadow-md">
+            <h2 class="text-xl font-bold mb-2">Doação</h2>
+            <img src="img/2.png" alt="Placeholder 3" class="mb-4 rounded-lg">
+            <p class="text-gray-700"></p>
+        </div>
+    </div>
+<!-- Div principal com fundo azul, texto à esquerda e botão à direita -->
+<div class="blue-container container mx-auto mt-8" style="background-color: #f4b821;">
+    <div class="left-text-blue" >
+        <p class="text-doacao">Faça uma doação. Ajude a manter este projeto de amparo!</p>
+        </div>
+    <button class="right-button-blue bg-button"><a href="/contato/contato.html">Quero Doar!</a></button>
+</div>
+    <!-- Carrossel usando Owl Carousel -->
+    <div class="container mx-auto mt-8 relative z-10">
+        <div class="owl-carousel owl-theme">
+            <!-- Placeholder do banner -->
+            <div><img src="./img/Captura de Tela (4138).png" alt="Banner"></div>
+            <div><img src="./img/Captura de Tela (4150).png" alt="Imagem 1"></div>
+            <div><img src="./img/Captura de Tela (4175).png" alt="Imagem 2"></div>
+            <div><img src="img/Captura de Tela (4196).png" alt="Imagem 3"></div>
+            <div><img src="./img/Captura de Tela (4139).png" alt="Banner"></div>
+            <div><img src="img/Captura de Tela (4164).png" alt="Imagem 1"></div>
+            <div><img src="img/Captura de Tela (4181).png" alt="Imagem 2"></div>
+            <div><img src="img/Captura de Tela (4143).png" alt="Imagem 3"></div>
+            <div><img src="img/Captura de Tela (4148).png" alt="Banner"></div>
+            <div><img src="img/Captura de Tela (4157).png" alt="Imagem 1"></div>
+            <div><img src="img/Captura de Tela (4162).png" alt="Imagem 2"></div>
+            <div><img src="img/Captura de Tela (4176).png" alt="Imagem 3"></div>
+            <!--  -->
+            <div><img src="./img/Captura de Tela (4151).png" alt="Banner"></div>
+            <div><img src="./img/Captura de Tela (4153).png" alt="Imagem 1"></div>
+            <div><img src="./img/Captura de Tela (4195).png" alt="Imagem 2"></div>
+            <div><img src="img/Captura de Tela (4145).png" alt="Imagem 3"></div>
+            <div><img src="./img/Captura de Tela (4176).png" alt="Banner"></div>
+            <div><img src="img/Captura de Tela (4141).png" alt="Imagem 1"></div>
+            <div><img src="img/Captura de Tela (4142).png" alt="Imagem 2"></div>
+            <div><img src="img/Captura de Tela (4143).png" alt="Imagem 3"></div>
+            <div><img src="img/Captura de Tela (4146).png" alt="Banner"></div>
+            <div><img src="img/Captura de Tela (4144).png" alt="Imagem 1"></div>
+            <div><img src="img/Captura de Tela (4177).png" alt="Imagem 2"></div>
+            <div><img src="img/Captura de Tela (4176).png" alt="Imagem 3"></div>
+            <!--  -->
+            <div><img src="img/Captura de Tela (4179).png" alt="Imagem 2"></div>
+            <div><img src="img/Captura de Tela (4182).png" alt="Imagem 3"></div>
+            <div><img src="img/Captura de Tela (4190).png" alt="Banner"></div>
+            <div><img src="img/Captura de Tela (4159).png" alt="Imagem 1"></div>
+            <div><img src="img/Captura de Tela (4158).png" alt="Imagem 2"></div>
+            <div><img src="img/Captura de Tela (4156).png" alt="Imagem 3"></div>
+        </div>
+    </div>
+
+ 
+     <!-- Div principal com fundo laranja, texto à esquerda e botão à direita -->
+     <div class="orange-container container mx-auto mt-8" style="background-color: #f4b821;">
+        <div class="left-text" >
+            Seja um voluntário e venha fazer a diferença na vida de muitos!
+            </div>
+            <p></p>
+        <button class="right-button"><a href="/contato/contato.html">Entre em Contato!</a></button>
+    </div>
+
+
+
+
+
+
+
+
+
+    <!-- Rodapé fixo -->
+    <footer class="bg-seagull-400 text-white p-4 mt-8 font-sans font-bold">
+        <div class="container mx-auto text-center">
+            
+            <!-- Adicione a classe "text-left" à div para alinhar à esquerda -->
+            <div class="text-left flex space-x-4">
+                <h3 class="text-lg font-bold mb-4">Nossas Mídias Sociais:</h3>
+                <a href="https://www.facebook.com/trabalhadores.daultimahora.33" class="text-white">
+                    <i class="fab fa-facebook-square text-2xl"></i>
+                </a>
+                <a href="https://www.instagram.com/trabalhadores.daultimahora/" class="text-white">
+                    <i class="fab fa-instagram-square text-2xl"></i>
+                </a>
+                <a href="https://wa.me/38992072259" target="_blank" class="text-white">
+                    <i class="fab fa-whatsapp-square text-2xl"></i>
+                </a>
+                
+            </div>
+            <p>&copy; 2024 Instituição de Caridade Trabalhadores da Última Hora. Todos os direitos reservados.</p>
+            <p>CNPJ: 53.140.991/0001-74</p>
+            <div class="mt-4">
+                <img src="./img/Logomarca.png" alt="Logomarca" class="w-auto h-16 mx-auto">
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!-- Scripts para a funcionalidade do menu hamburguer e do carrossel -->
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const menuItems = document.querySelector('.lg\\:flex');
+
+        menuToggle.addEventListener('click', () => {
+            menuItems.classList.toggle('hidden');
+        });
+
+        // Inicialização do carrossel usando Owl Carousel
+        $(document).ready(function () {
+            $('.owl-carousel').owlCarousel({
+                // Configurações do carrossel (você pode ajustar conforme necessário)
+                autoplay: true,
+                autoplayTimeout: 3000,
+                items: 1,
+                center: true,
+                loop: true,
+                margin: 10,
+                responsive: {
+                    600: {
+                        items: 1
+                    }
+                }
+            });
+        });
+
+        // Adicionando funcionalidade ao botão de play
+        const playButton = document.getElementById('playButton');
+        const videoModal = document.getElementById('videoModal');
+        const modalVideoPlayer = document.getElementById('modalVideoPlayer');
+
+        playButton.addEventListener('click', () => {
+            videoModal.style.display = 'block';
+            modalVideoPlayer.play();
+        });
+
+        function closeModal() {
+            videoModal.style.display = 'none';
+            modalVideoPlayer.pause();
+        }
+
+        // Fechar modal ao clicar fora do vídeo
+        window.addEventListener('click', (event) => {
+            if (event.target === videoModal) {
+                closeModal();
+            }
+        });
+    </script>
+    
+
+    <script>
+        // Adicione isso ao seu script JavaScript
+$(document).ready(function () {
+    // Inicialização do carrossel usando Owl Carousel
+    $('.video-carousel').owlCarousel({
+        items: 3, // Altere conforme necessário para o número desejado de vídeos visíveis ao mesmo tempo
+        loop: true,
+        margin: 15,
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 2
+            },
+            1000: {
+                items: 3
+            }
+        }
+    });
+
+    // Adicionando funcionalidade ao botão de play
+    $('.play-button').click(function () {
+        const videoId = $(this).data('video');
+        const videoUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+
+        $('#videoModal iframe').attr('src', videoUrl);
+        $('#videoModal').css('display', 'block');
+    });
+
+    // Fechar modal ao clicar fora do vídeo
+    $(window).click(function (event) {
+        const videoModal = $('#videoModal');
+        if (event.target === videoModal[0]) {
+            closeModal();
+        }
+    });
+
+    // Fechar modal ao clicar no botão de fechar
+    $('.close').click(function () {
+        closeModal();
+    });
+});
+
+function closeModal() {
+    $('#videoModal iframe').attr('src', '');
+    $('#videoModal').css('display', 'none');
+}
+
+    </script>
+</body>
+
+</html>

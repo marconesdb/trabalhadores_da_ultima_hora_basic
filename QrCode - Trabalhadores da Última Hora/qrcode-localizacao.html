@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code - Localização</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            text-align: center;
+            max-width: 500px;
+        }
+        h1 {
+            color: #4a5568;
+            margin-bottom: 10px;
+            font-size: 24px;
+        }
+        h2 {
+            color: #667eea;
+            margin-bottom: 25px;
+            font-size: 18px;
+            font-weight: normal;
+        }
+        #qrcode {
+            display: inline-block;
+            padding: 20px;
+            background: white;
+            border-radius: 15px;
+            margin: 20px 0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .info {
+            text-align: left;
+            margin: 25px 0;
+            padding: 20px;
+            background: #f7fafc;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+        }
+        .info p {
+            margin: 10px 0;
+            color: #2d3748;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        .info strong {
+            color: #4a5568;
+        }
+        .emoji {
+            margin-right: 8px;
+        }
+        .footer {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 2px solid #e2e8f0;
+            color: #718096;
+            font-style: italic;
+            font-size: 14px;
+        }
+        .btn {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 15px;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background: #764ba2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🕊️ INSTITUIÇÃO DE CARIDADE</h1>
+        <h2>Trabalhadores da Última Hora</h2>
+        
+        <div id="qrcode"></div>
+        
+        <div class="info">
+            <p><span class="emoji">📍</span><strong>Endereço:</strong><br>
+            Rua João Figueiredo, Nº 318<br>
+            Bairro Vila Exposição<br>
+            Montes Claros - MG</p>
+            
+            <p><span class="emoji">🕊️</span><strong>Referência:</strong> Parque de Exposição</p>
+            
+            <p><span class="emoji">🌐</span><strong>Site:</strong> www.trabalhadoresdaultimahora.com.br</p>
+            
+            <p><span class="emoji">📸</span><strong>Instagram:</strong> @trabalhadores.daultimahora</p>
+        </div>
+        
+        <button class="btn" onclick="abrirMapa()">📍 Abrir no Google Maps</button>
+        
+        <div class="footer">
+            <p>🌞 <em>"Com carinho e luz"</em></p>
+            <p><em>Filhos de Maria, a serviço do Cristo Redentor</em></p>
+        </div>
+    </div>
+
+    <script>
+        // Endereço completo para o Google Maps
+        const endereco = "Rua João Figueiredo, 318, Vila Exposição, Montes Claros, MG";
+        const urlMaps = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(endereco)}`;
+        
+        // Gerar QR Code
+        new QRCode(document.getElementById("qrcode"), {
+            text: urlMaps,
+            width: 200,
+            height: 200,
+            colorDark: "#4a5568",
+            colorLight: "#ffffff",
+            correctLevel: QRCode.CorrectLevel.H
+        });
+        
+        // Função para abrir o mapa
+        function abrirMapa() {
+            window.open(urlMaps, '_blank');
+        }
+    </script>
+</body>
+</html>

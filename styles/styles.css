@@ -1,0 +1,224 @@
+
+
+/* Estilo da Seção do Contador Personalizado */
+.counter-section {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 8px;
+}
+
+/* Estilo do Item do Contador */
+.counter-item {
+    text-align: center;
+}
+
+/* Estilo dos Ícones */
+.counter-icon {
+    font-size: 4rem;
+    margin-bottom: 0.5rem;
+}
+ /* Estilos adicionados para o modal */
+ .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #888;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #000;
+}
+
+
+/* Estilos para o contador */
+
+/* Adicione ao seu arquivo de estilos ou dentro da tag <style> no cabeçalho */
+.counter-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.counter-item {
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s, transform 1s;
+}
+
+.counter-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Estilo para o traço hover nas listas */
+
+  /* Estilo padrão para o traço nas listas */
+  .nav-link::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 0;
+    background-color: orangered; /* Cor do traço */
+    transition: width 0.3s; /* Adiciona uma transição suave */
+}
+
+/* Estilo para o traço no hover e foco nas listas */
+.nav-link:hover::after, .nav-link:focus::after {
+    width: 100%;
+}
+
+/* Responsividade para telas menores que 768 pixels (pode ajustar conforme necessário) */
+@media (max-width: 768px) {
+    .nav-link::after {
+        display: none; /* Oculta o traço em telas menores */
+    }
+}
+
+/* Estilo da Seção do Contador Personalizado */
+.counter-section {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 8px;
+    color: black;
+  
+}
+
+/* Estilo do Item do Contador */
+.counter-item {
+    text-align: center;
+    color: white;
+    
+}
+
+/* Estilo dos Ícones */
+.counter-icon {
+    font-size: 4rem;
+    margin-bottom: 0.5rem;
+    
+}
+
+/* Estilos para a div principal */
+.orange-container {
+    background-color: gainsboro;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Estilos para o texto à esquerda */
+.left-text {
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Estilos para o botão à direita */
+.right-button {
+    background-color: black;
+    color: yellow;
+    border: 2px solid orange;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+ /* Estilos para a div principal */
+ .blue-container {
+    
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Estilos para o texto à esquerda */
+.left-text-blue {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Estilos para o botão à direita */
+.right-button-blue {
+    background-color: white;
+    color: dodgerblue;
+    border: 2px solid dodgerblue;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.text-doacao{
+    color: black;
+    
+}
+
+.bg-button{
+    background-color: aqua;
+    color: orangered;
+}
+
+
+
+#playButton {
+    position: absolute;
+    bottom: 6.5%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+
+.video-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+#videoModal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+

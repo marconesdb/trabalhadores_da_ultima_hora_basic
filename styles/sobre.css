@@ -1,0 +1,97 @@
+body {
+    min-height: 100vh; /* Faz com que o corpo da página ocupe pelo menos a altura total da viewport */
+    margin: 0; /* Remove margens padrão */
+    display: flex;
+    flex-direction: column;
+}
+
+section {
+    flex: 1;
+}
+
+.content {
+    flex: 1; /* Faz com que o conteúdo preencha o espaço disponível */
+}
+
+
+
+/* Galeria Imagens */
+@media (min-width: 1024px) {
+    .gallery-container {
+        justify-content: center;
+    }
+}
+
+/* Fim */
+
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+/* Novo estilo para o rodapé */
+footer {
+    position: relative;
+    margin-top: 100px; /* Ajuste conforme necessário para evitar sobreposição */
+}
+
+@media (max-width: 767px) {
+    footer {
+      display: block !important; /* Certifique-se de que o rodapé seja exibido */
+    }
+  }
+  
+/* Adicionei uma classe específica para o container da galeria */
+.galeria-container {
+    margin-bottom: 250px; /* Adapte este valor conforme necessário */
+}
+
+/* Estilos para a div principal */
+/* Adicione estilos para a yellow-container */
+.yellow-container {
+    
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px; /* Adicione esta margem para separar da galeria */
+    margin-bottom: 20px; /* Adicione esta margem para separar do conteúdo abaixo */
+}
+
+.yellow-container .left-text-yellow {
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.yellow-container .right-button-yellow {
+    background-color: black;
+    color: yellow;
+    border: 2px solid white;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.content-container {
+    margin-bottom: 4rem; /* Ajuste conforme necessário */
+}
+
+.galeria-container {
+    margin-bottom: 4rem; /* Ajuste o valor conforme necessário */
+}
