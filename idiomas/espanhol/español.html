@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -12,12 +12,12 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Adicione o link para o Owl Carousel JS -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/owl.carousel.min.js"></script>
-    <link rel="stylesheet" href="./styles/tailwind.css">
+    <link rel="stylesheet" href="../../styles/tailwind.css">
     <script src="./js/tailwind.config.js"></script>
 
 
     <!-- CSS do Video Play -->
-    <link rel="stylesheet" type="text/css" href="./styles/styles.css" />
+    <link rel="stylesheet" type="text/css" href="../../styles/styles.css" />
     <!-- Link Fonte Nunito Sans -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
     <!-- Adicione o link para a biblioteca Font Awesome -->
@@ -29,9 +29,9 @@
     <!-- Link para a biblioteca Waypoints - Contador -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
 
-    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../../img/favicon.png" type="image/x-icon">
 
-    <title>Trabalhadores da Última Hora</title>
+    <title>Workers of the Last Hour</title>
 </head>
 
 <body  class="bg-gray-100 font-sans">
@@ -60,9 +60,9 @@
         
         <!-- Links de navegação para dispositivos maiores -->
         <div class="hidden lg:flex items-center space-x-4">
-            <a href="index.html" class="text-white nav-link font-sans font-bold" data-translate="nav-início">Início</a>
-            <a href="./sobre/sobre.html" class="text-white nav-link font-sans font-bold" data-translate="nav-sobre">Sobre</a>
-            <a href="./contato/contato.html" class="text-white nav-link font-sans font-bold" data-translate="nav-contato">Contato</a>
+            <a href="index.html" class="text-white nav-link font-sans font-bold" data-translate="nav-home">Home</a>
+            <a href="./sobre/sobre.html" class="text-white nav-link font-sans font-bold" data-translate="nav-about">About</a>
+            <a href="./contato/contato.html" class="text-white nav-link font-sans font-bold" data-translate="nav-contact">Contact</a>
             
             <!-- Botão de Idioma -->
             <div class="language-dropdown">
@@ -72,19 +72,19 @@
                     <i class="fas fa-chevron-down text-sm"></i>
                 </button>
                 <div class="language-dropdown-content">
-                    <a href="./index.html" onclick="changeLanguage('pt'); return false;">
+                    <a href="../../index.html" onclick="changeLanguage('pt'); return false;">
                         <i class="fas fa-flag"></i> Português
                     </a>
-                    <a href="./idiomas/english/english.html" onclick="changeLanguage('en'); return false;">
+                    <a href="../../idiomas/english/english.html" onclick="changeLanguage('en'); return false;">
                         <i class="fas fa-flag"></i> Inglês
                     </a>
-                    <a href="./idiomas/espanhol/español.html" onclick="changeLanguage('es'); return false;">
+                    <a href="../espanhol/español.html" onclick="changeLanguage('es'); return false;">
                         <i class="fas fa-flag"></i> Espanhol
                     </a>
-                    <a href="./idiomas/frances/français.html" onclick="changeLanguage('fr'); return false;">
+                    <a href="../frances/français.html" onclick="changeLanguage('fr'); return false;">
                         <i class="fas fa-flag"></i> Francês
                     </a>
-                     <a href="./idiomas/frances/français.html" onclick="changeLanguage('fr'); return false;">
+                     <a href="../italiano/italiano.html" onclick="changeLanguage('it'); return false;">
                         <i class="fas fa-flag"></i> Italiano
                     </a>
                 </div>
@@ -93,18 +93,22 @@
     </div>
 </nav>
 
-
-
-
     <!-- Conteúdo principal -->
 <div class="container mx-auto mt-28 flex flex-col lg:flex-row ">
 
    <!-- Parte 1: Título e Frase -->
 <div class="lg:w-1/2 p-8 mb-4 rounded-xl overflow-hidden">
     <div class="bg-gray-300 p-8">
-        <h1 class="text-4xl font-bold mb-2">Bem-vindo ao site Trabalhadores da Última Hora!</h1>
+        <h1 class="text-4xl font-bold mb-2">Bienvenido al sitio Trabajadores de la Última Hora!</h1>
         
-        <p class="text-gray-700 font-sans font-bold italic">(...)"Meus filhos, na máxima: Fora da caridade não há salvação, estão encerrados os destinos dos homens, na Terra e no céu; na Terra, porque à sombra desse estandarte eles viverão em paz; no céu, porque os que a houverem praticado acharão graças diante do Senhor. Essa divisa é o facho celeste, a luminosa coluna que guia o homem no deserto da vida, encaminhando-o para a Terra da Promissão.(...) - CAP 15, Item 10 - Evangelho Segundo o Espiritismo - Allan Kardec"</p>
+        <p class="text-gray-700 font-sans font-bold italic">
+Bienvenido al sitio Trabajadores de la Última Hora!
+
+«(…) Hijos míos, en la máxima: Fuera de la caridad no hay salvación, están contenidos los destinos de los hombres, en la Tierra y en el Cielo; en la Tierra, porque a la sombra de ese estandarte vivirán en paz; en el Cielo, porque aquellos que la hubieren practicado hallarán gracia ante el Señor. Esta divisa es el faro celestial, la columna luminosa que guía al hombre en el desierto de la vida, conduciéndolo hacia la Tierra de la Promisión. (…)»
+
+— Cap. 15, Ítem 10 — El Evangelio Según el Espiritismo — Allan Kardec
+ 
+ </p>
         
     </div>
      
@@ -119,7 +123,7 @@
 <div class="lg:w-1/2 relative flex justify-center items-center">
     <div class="w-full h-full overflow-hidden relative">
         <div class="video-container relative">
-            <img src="./img/Logomarca.png" alt="" class="mx-auto" style="width: 100%; max-width: 270px;">
+            <img src="../../img/Logomarca.png" alt="" class="mx-auto" style="width: 100%; max-width: 270px;">
             <!-- Botão de reprodução -->
             <button id="playButton" class="play-button absolute bottom-0 left-1/2 transform -translate-x-1/2 -mb-6"><span>▶</span></button>
         </div>
@@ -148,8 +152,10 @@
             <span class="close" onclick="closeModal()">&times;</span>
             <video class="w-full h-full" controls poster="" id="modalVideoPlayer">
                 <!-- Adicione o caminho do vídeo local ou URL do vídeo aqui -->
-                <source src="./video/Trabalhadores da Última Hora - Montes Claros - MG.mp4" type="video/mp4">
-                Seu navegador não suporta o elemento de vídeo.
+                <source src="../../video/Trabalhadores da Última Hora - Montes Claros - MG.mp4" type="video/mp4">
+               Su navegador no es compatible con el elemento de vídeo.
+
+
             </video>
         </div>
     </div>
@@ -166,8 +172,8 @@
                 <i class="fas fa-utensils text-3xl text-gray-500"></i>
             </div>
             <div >
-                <h3 class="text-xl font-bold">Marmitas Distribuídas</h3>
-                <p class="text-gray-600"><b>+ de 600 por dia</b></p>
+                <h3 class="text-xl font-bold">Marmitas distribuidas: más de 600 por día</h3>
+                <p class="text-gray-600"><b>Horas de colaboración: más de 10 000</b></p>
             </div>
         </div>
 
@@ -177,8 +183,8 @@
                 <i class="far fa-clock text-3xl text-gray-500"></i>
             </div>
             <div >
-                <h3 class="text-xl font-bold">Horas de Colaboração</h3>
-                <p class="text-gray-600"><b>+ de 10000</b></p>
+                <h3 class="text-xl font-bold">Horas de Colaboración</h3>
+                <p class="text-gray-600"><b>Más de 10.000</b></p>
             </div>
         </div>
 
@@ -188,8 +194,8 @@
                 <i class="fas fa-users text-3xl text-gray-500"></i>
             </div>
             <div>
-                <h3 class="text-xl font-bold">Pessoas Atendidas</h3>
-                <p class="text-gray-600"><b>+ de 8000</b></p>
+                <h3 class="text-xl font-bold">Personas Asistidas</h3>
+                <p class="text-gray-600"><b>Más de 8.000</b></p>
             </div>
         </div>
     </div>
@@ -201,77 +207,83 @@
     <div class="container mx-auto mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         <!-- Card 1 -->
         <div class="bg-gray-300 p-4 rounded-lg shadow-md">
-            <h2 class="text-xl font-bold mb-2">Endereço</h2>
-            <img src="img/3.png" alt="Placeholder 1" class="mb-4 rounded-lg">
+            <h2 class="text-xl font-bold mb-2">Dirección</h2>
+            <img src="../../img/3.png" alt="Placeholder 1" class="mb-4 rounded-lg">
             <p class="text-gray-700"></p>
         </div>
         <!-- Card 2 -->
         <div class="bg-gray-300 p-4 rounded-lg shadow-md">
-            <h2 class="text-xl font-bold mb-2">Kombi</h2>
-            <img src="img/1.png" alt="Placeholder 2" class="mb-4 rounded-lg">
+            <h2 class="text-xl font-bold mb-2">Furgoneta (Kombi)</h2>
+            <img src="../../img/1.png" alt="Placeholder 2" class="mb-4 rounded-lg">
             <p class="text-gray-700"></p>
         </div>
         <!-- Card 3 -->
         <div class="bg-gray-300 p-4 rounded-lg shadow-md">
-            <h2 class="text-xl font-bold mb-2">Doação</h2>
-            <img src="img/2.png" alt="Placeholder 3" class="mb-4 rounded-lg">
+            <h2 class="text-xl font-bold mb-2">Donación</h2>
+            <img src="../../img/2.png" alt="Placeholder 3" class="mb-4 rounded-lg">
             <p class="text-gray-700"></p>
         </div>
     </div>
 <!-- Div principal com fundo azul, texto à esquerda e botão à direita -->
 <div class="blue-container container mx-auto mt-8" style="background-color: #f4b821;">
     <div class="left-text-blue" >
-        <p class="text-doacao">Faça uma doação. Ajude a manter este projeto de amparo!</p>
+        <p class="text-doacao">Haz una donación. ¡Ayuda a mantener este proyecto de amparo!
+</p>
         </div>
-    <button class="right-button-blue bg-button"><a href="/contato/contato.html">Quero Doar!</a></button>
+    <button class="right-button-blue bg-button"><a href="/contato/contato.html">¡Quiero donar!
+
+</a></button>
 </div>
     <!-- Carrossel usando Owl Carousel -->
     <div class="container mx-auto mt-8 relative z-10">
         <div class="owl-carousel owl-theme">
             <!-- Placeholder do banner -->
-            <div><img src="./img/Captura de Tela (4138).png" alt="Banner"></div>
-            <div><img src="./img/Captura de Tela (4150).png" alt="Imagem 1"></div>
-            <div><img src="./img/Captura de Tela (4175).png" alt="Imagem 2"></div>
-            <div><img src="img/Captura de Tela (4196).png" alt="Imagem 3"></div>
-            <div><img src="./img/Captura de Tela (4139).png" alt="Banner"></div>
-            <div><img src="img/Captura de Tela (4164).png" alt="Imagem 1"></div>
-            <div><img src="img/Captura de Tela (4181).png" alt="Imagem 2"></div>
-            <div><img src="img/Captura de Tela (4143).png" alt="Imagem 3"></div>
-            <div><img src="img/Captura de Tela (4148).png" alt="Banner"></div>
-            <div><img src="img/Captura de Tela (4157).png" alt="Imagem 1"></div>
-            <div><img src="img/Captura de Tela (4162).png" alt="Imagem 2"></div>
-            <div><img src="img/Captura de Tela (4176).png" alt="Imagem 3"></div>
+            <div><img src="../../img/Captura de Tela (4138).png" alt="Banner"></div>
+            <div><img src="../../img/Captura de Tela (4150).png" alt="Imagem 1"></div>
+            <div><img src="../../img/Captura de Tela (4175).png" alt="Imagem 2"></div>
+            <div><img src="../../img/Captura de Tela (4196).png" alt="Imagem 3"></div>
+            <div><img src="../../img/Captura de Tela (4139).png" alt="Banner"></div>
+            <div><img src="../../img/Captura de Tela (4164).png" alt="Imagem 1"></div>
+            <div><img src="../../img/Captura de Tela (4181).png" alt="Imagem 2"></div>
+            <div><img src="../../img/Captura de Tela (4143).png" alt="Imagem 3"></div>
+            <div><img src="../../img/Captura de Tela (4148).png" alt="Banner"></div>
+            <div><img src="../../img/Captura de Tela (4157).png" alt="Imagem 1"></div>
+            <div><img src="../../img/Captura de Tela (4162).png" alt="Imagem 2"></div>
+            <div><img src="../../img/Captura de Tela (4176).png" alt="Imagem 3"></div>
             <!--  -->
-            <div><img src="./img/Captura de Tela (4151).png" alt="Banner"></div>
-            <div><img src="./img/Captura de Tela (4153).png" alt="Imagem 1"></div>
-            <div><img src="./img/Captura de Tela (4195).png" alt="Imagem 2"></div>
-            <div><img src="img/Captura de Tela (4145).png" alt="Imagem 3"></div>
-            <div><img src="./img/Captura de Tela (4176).png" alt="Banner"></div>
-            <div><img src="img/Captura de Tela (4141).png" alt="Imagem 1"></div>
-            <div><img src="img/Captura de Tela (4142).png" alt="Imagem 2"></div>
-            <div><img src="img/Captura de Tela (4143).png" alt="Imagem 3"></div>
-            <div><img src="img/Captura de Tela (4146).png" alt="Banner"></div>
-            <div><img src="img/Captura de Tela (4144).png" alt="Imagem 1"></div>
-            <div><img src="img/Captura de Tela (4177).png" alt="Imagem 2"></div>
-            <div><img src="img/Captura de Tela (4176).png" alt="Imagem 3"></div>
+            <div><img src="../../img/Captura de Tela (4151).png" alt="Banner"></div>
+            <div><img src="../../img/Captura de Tela (4153).png" alt="Imagem 1"></div>
+            <div><img src="../../img/Captura de Tela (4195).png" alt="Imagem 2"></div>
+            <div><img src="../../img/Captura de Tela (4145).png" alt="Imagem 3"></div>
+            <div><img src="../../img/Captura de Tela (4176).png" alt="Banner"></div>
+            <div><img src="../../img/Captura de Tela (4141).png" alt="Imagem 1"></div>
+            <div><img src="../../img/Captura de Tela (4142).png" alt="Imagem 2"></div>
+            <div><img src="../../img/Captura de Tela (4143).png" alt="Imagem 3"></div>
+            <div><img src="../../img/Captura de Tela (4146).png" alt="Banner"></div>
+            <div><img src="../../img/Captura de Tela (4144).png" alt="Imagem 1"></div>
+            <div><img src="../../img/Captura de Tela (4177).png" alt="Imagem 2"></div>
+            <div><img src="../../img/Captura de Tela (4176).png" alt="Imagem 3"></div>
             <!--  -->
-            <div><img src="img/Captura de Tela (4179).png" alt="Imagem 2"></div>
-            <div><img src="img/Captura de Tela (4182).png" alt="Imagem 3"></div>
-            <div><img src="img/Captura de Tela (4190).png" alt="Banner"></div>
-            <div><img src="img/Captura de Tela (4159).png" alt="Imagem 1"></div>
-            <div><img src="img/Captura de Tela (4158).png" alt="Imagem 2"></div>
-            <div><img src="img/Captura de Tela (4156).png" alt="Imagem 3"></div>
+            <div><img src="../../img/Captura de Tela (4179).png" alt="Imagem 2"></div>
+            <div><img src="../../img/Captura de Tela (4182).png" alt="Imagem 3"></div>
+            <div><img src="../../img/Captura de Tela (4190).png" alt="Banner"></div>
+            <div><img src="../../img/Captura de Tela (4159).png" alt="Imagem 1"></div>
+            <div><img src="../../img/Captura de Tela (4158).png" alt="Imagem 2"></div>
+            <div><img src="../../img/Captura de Tela (4156).png" alt="Imagem 3"></div>
         </div>
     </div>
 
  
      <!-- Div principal com fundo laranja, texto à esquerda e botão à direita -->
+      <!-- Div principal com fundo laranja, texto à esquerda e botão à direita -->
      <div class="orange-container container mx-auto mt-8" style="background-color: #f4b821;">
         <div class="left-text" >
-            Seja um voluntário e venha fazer a diferença na vida de muitos!
+            Sé voluntario y ven a marcar la diferencia en la vida de muchas personas.
+
             </div>
             <p></p>
-        <button class="right-button"><a href="/contato/contato.html">Entre em Contato!</a></button>
+        <button class="right-button"><a href="/contato/contato.html">Ponte en contacto
+</a></button>
     </div>
 
 
@@ -288,7 +300,7 @@
             
             <!-- Adicione a classe "text-left" à div para alinhar à esquerda -->
             <div class="text-left flex space-x-4">
-                <h3 class="text-lg font-bold mb-4">Nossas Mídias Sociais:</h3>
+                <h3 class="text-lg font-bold mb-4">Nuestras Redes Sociales</h3>
                 <a href="https://www.facebook.com/trabalhadores.daultimahora.33" class="text-white">
                     <i class="fab fa-facebook-square text-2xl"></i>
                 </a>
@@ -300,10 +312,10 @@
                 </a>
                 
             </div>
-            <p>&copy; 2025 Instituição de Caridade Trabalhadores da Última Hora. Todos os direitos reservados.</p>
+            <p>&copy; 2025 Institución de Caridad Trabajadores de la Última Hora. Todos los derechos reservados.</p>
             <p>CNPJ: 53.140.991/0001-74</p>
             <div class="mt-4">
-                <img src="./img/Logomarca.png" alt="Logomarca" class="w-auto h-16 mx-auto">
+                <img src="../../img/Logomarca.png" alt="Logomarca" class="w-auto h-16 mx-auto">
             </div>
         </div>
     </footer>
